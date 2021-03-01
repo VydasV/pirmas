@@ -4,7 +4,7 @@ def add_aboutus_text_from_file() -> str:
        """
     
     try:
-        with open('..\\static\\apie_mus.txt', 'r', encoding='utf-8') as file:
+        with open('apie_mus.txt', 'r', encoding='utf-8') as file:
             text = ' '.join(file.readlines())
     except FileNotFoundError:
         text = 'slapta "Kardo ir žagrės" sąjunga - mūsų rankos ilgos!!!'
