@@ -1,0 +1,1 @@
+pagal susitarimą, static failams (css, jpeg, etc.) skirta direktorija turi vadintis "static"

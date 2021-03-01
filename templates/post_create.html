@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<p class="fs-5">Pranešimas minties galiūnui, rusų demokratijos tėvui...</p>
+<form method="POST">
+    <input type="date" name="date" class="form-control"><br>
+    <textarea name="text" class="form-control"
+              placeholder="Kuriame pulke tarnavot? Teks padirbėt tėvynės labui. Jūs bajorai?"></textarea><br>
+    <input type="submit" class="btn btn-outline-success btn-sm" value="Įrašyti">
+    <a href="/posts" class="btn btn-outline-secondary btn-sm" type="button">Į sąrašą</a>
+</form>
+{% endblock %}

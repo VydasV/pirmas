@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form action="" method="POST">
+    <input type="date" name="date" class="form-control" value="{{ event.event_date }}"><br>
+    <textarea name="text" class="form-control">{{ event.event_text }}</textarea><br>
+    <input type="submit" class="btn btn-outline-success btn-sm" value="Įrašyti">
+    <a href="/posts" class="btn btn-outline-secondary btn-sm" type="button">Į sąrašą</a>
+</form>
+{% endblock %}

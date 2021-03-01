@@ -1,0 +1,1 @@
+pagal susitarimą, šablonams (HTML) skirta direktorija turi vadintis "templates"

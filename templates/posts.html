@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h3>Mes tikimės su jūsų pagalba nugalėti priešą. Aš jums duosiu parabelį.</h3><br>
+{% if events|length > 0 %}
+{% for event in events%}
+<div class="list-group">
+    <a href="/post/{{ event.id }}" class="list-group-item list-group-item-action"> {{ event.event_date}}
+        <br>{{ event.event_text }} <br></a>
+</div>
+{% endfor %}
+{% else %}
+<p> Kada bus kitas posėdis, pranešime kiekvienam atskirai </p>
+{% endif %}
+{% endblock %}
