@@ -43,7 +43,7 @@ def create_app():
     @app.route('/posts')
     def posts():
         """atvaizduoja įrašus apie įvykius"""
-        events = Event.query.order_by(Event.event_date.desc()).all()
+        events = Event.query.order_by(Event.event_id.desc()).all()
         return render_template('posts.html', title='Pranešimai', events=events)
 
 
