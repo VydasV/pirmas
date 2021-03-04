@@ -67,8 +67,11 @@ def post_delete(id):
 def create_event():
     """sukuria naują duomenų bazės įrašą"""
     if request.method == "POST":
-        # date grąžina str, todėl reikia konvertuoti į datos tipą
-        event_date = date.fromisoformat(request.form['date'])
+        if request.form['date'] == '':
+            event_date = date.today()
+        else:
+            # date grąžina str, todėl reikia konvertuoti į datos tipą
+            event_date = date.fromisoformat(request.form['date'])
         event_text = request.form['text']
 
         record = Event(event_text=event_text, event_date=event_date)
