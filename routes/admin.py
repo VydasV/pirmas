@@ -10,4 +10,3 @@ bp = Blueprint('admin', __name__)
 def delete_old_posts():
     text = delete_old_posts_from_db(Event)
     return make_response(text)
-    

@@ -8,6 +8,7 @@ from database import db
 
 bp = Blueprint('site', __name__)
 
+
 @bp.route('/')
 @bp.route('/home')
 def index():
@@ -88,4 +89,3 @@ def modify_event(id):
             return 'Įvyko klaida redaguojant pranešimą apie "Kardo ir žagrės" sąjungą!'
     else:
         return render_template('post_modify.html', title='Redaguoti įvykį', event=event)
-    
