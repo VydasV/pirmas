@@ -3,6 +3,7 @@ import os
 from flask import Flask
 
 from routes.site import bp as site_bp
+from routes.admin import bp as admin_bp
 
 from database import db
 
@@ -16,6 +17,7 @@ def create_app():
 
     # registruoja blueprint
     app.register_blueprint(site_bp)
+    app.register_blueprint(admin_bp, url_prefix='/admin')
     
     db.init_app(app)
     return app
