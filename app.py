@@ -3,7 +3,7 @@ import os
 from flask import Flask
 
 from routes.site import bp as site_bp
-from routes.admin import bp as admin_bp
+from admin.admin import bp as admin_bp
 
 from database import db
 
